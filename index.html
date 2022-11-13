@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Приложение для изучения иностранных слов</title>
 </head>
@@ -56,9 +56,17 @@
                         <button id="next" type="button">▶️</button>
                     </div>
                 </div>
-                <div id="exam-cards"></div>
+                <div id="exam-cards">
+                    <div class="game-content">
+                        <div class="game-section">
+                            <div class="game-section_container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="confetti"></div>
             </div>
-            <div class="motivation">Давай, ты сможешь!</div>
+            <div class="motivation">Ты сможешь!</div>
         </main>
         <div class="results-modal hidden">
             <h1>Твоя статистика 🥺💜</h1>
@@ -72,7 +80,7 @@
         </template>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="./js/script.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+import { createGameMenu } from "./gameMenue.js";
+
 const studyCards = document.querySelector('.study-cards');
 const card = document.querySelector('.flip-card');
 const results = document.querySelector('.results-modal');
@@ -122,34 +124,8 @@ examButton.addEventListener('click', function() {
     studyMode.classList.add("hidden");
     examMode.classList.remove("hidden");
 
-    /*async function prepareData() {
-        const getRandomCardsData = async() => {
-            const urls = ["https://aws.random.cat/meow", "https://catfact.ninja/fact"].map((url) => fetch(url).then(r => r.json()));
-
-            return Promise.all(urls).then(([{ file }, { fact }]) => {
-                return { img: file, description: fact };
-            })
-        }
-        const template = document.querySelector("#cat-card");
-        const container = document.querySelector(".container");
-        const fragment = new DocumentFragment();
-        for (let i = 0; i < 10; i++) {
-            const card = template.content.cloneNode(true);
-            const { img, description } = await getRandomCardsData();
-            card.querySelector("img").src = img;
-            card.querySelector("p").textContent = description;
-            fragment.append(card);
-        }
-        container.onload = function() {
-            document.querySelector(".lds-ellipsis").style.display = 'none';
-        }
-        container.onload = function() {
-            document.getElementById("preloader").style.display = 'none';
-        };
-        container.append(fragment);
+    const cardsApp = () => {
+        createGameMenu();
     }
-    prepareData().finally(() => {
-        console.log("Котики добавлены");
-    })*/
-
+    cardsApp();
 });
