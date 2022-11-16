@@ -1,4 +1,5 @@
 import { startGame } from "./startGame.js";
+//import { timerId } from "./timerId.js";
 
 export const createGameMenu = () => {
     const title = document.createElement('h2');
@@ -6,8 +7,7 @@ export const createGameMenu = () => {
 
     gameContainer.innerHTML = '';
     title.textContent = 'Выбор сложности';
-    title.classList.add('game-content_title'); //game-menu_tittle
-    document.querySelector('.confetti').innerHTML = '';
+    title.classList.add('game-content_title');
 
     const createDifficultButton = (difficult) => {
         const button = document.createElement('button');
@@ -20,7 +20,9 @@ export const createGameMenu = () => {
         return button;
     }
 
-    gameContainer.append( //gameSection
+
+
+    gameContainer.append(
         title,
         createDifficultButton(6),
         createDifficultButton(8),

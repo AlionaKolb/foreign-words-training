@@ -1,3 +1,5 @@
+import { possibleWords } from "./getRandomWord.js";
+
 export const shuffle = (array) => {
     let currentIndex = array.length,
         randomIndex;
@@ -13,27 +15,17 @@ export const shuffle = (array) => {
 
     return array;
 }
-export const duplicateArray = (array) => array.reduce((res, current) => res.concat([current, current]), []);
 
-export const createIconsArray = (initialCount) => {
-    const cardsIcons = [
-        'one',
-        'two',
-        'three',
-        'four',
-        'five',
-        'six',
-    ];
-
-    switch (initialCount) {
+export const createIconsArray = (array) => {
+    switch (array) {
         case 6:
-            return cardsIcons.slice(0, 3);
+            return ((Object.keys(possibleWords)).slice(0, 3)).concat(Object.values(possibleWords).slice(0, 3));
         case 8:
-            return cardsIcons.slice(0, 4);
+            return ((Object.keys(possibleWords)).slice(0, 4)).concat(Object.values(possibleWords).slice(0, 4));
         case 10:
-            return cardsIcons.slice(0, 5);
+            return ((Object.keys(possibleWords)).slice(0, 5)).concat(Object.values(possibleWords).slice(0, 5));
         case 12:
-            return cardsIcons;
+            return ((Object.keys(possibleWords)).slice(0, 6)).concat(Object.values(possibleWords).slice(0, 6));
         default:
             break;
     }

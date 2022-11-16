@@ -1,14 +1,16 @@
-export const createGameCard = (defaultIcon, flippedCardIcon) => { //создаем карты
+//создаем карты
+export const createGameCard = (flippedCardName, defaultIcon) => {
     const card = document.createElement('div');
     card.classList.add('game-card');
 
-    const notFlippedCardI = document.createElement('i');
-    const flippedCardI = document.createElement('i');
+    const flippedCardTag = document.createElement('h1');
+    const notFlippedCardI = document.createElement('span');
 
-    notFlippedCardI.classList.add('fa', `fa-${defaultIcon}`);
-    flippedCardI.classList.add('fa', `fa-${defaultIcon}`);
 
-    card.append(flippedCardI, notFlippedCardI);
+    flippedCardTag.innerHTML = `${flippedCardName}`;
+    notFlippedCardI.classList.add(); // тут хочу найти название соответствующего ключа, чтоб потом сравнивать span-ы
+
+    card.append(flippedCardTag, notFlippedCardI);
 
     return card;
 }
