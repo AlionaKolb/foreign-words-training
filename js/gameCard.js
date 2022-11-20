@@ -1,4 +1,7 @@
-//создаем карты
+//создание карт
+
+import { possibleWords } from "./getRandomWord.js";
+
 export const createGameCard = (flippedCardName, defaultIcon) => {
     const card = document.createElement('div');
     card.classList.add('game-card');
@@ -8,7 +11,10 @@ export const createGameCard = (flippedCardName, defaultIcon) => {
 
 
     flippedCardTag.innerHTML = `${flippedCardName}`;
-    notFlippedCardI.classList.add(); // тут хочу найти название соответствующего ключа, чтоб потом сравнивать span-ы
+    notFlippedCardI.style.display = "none";
+
+    const conformityCard = Object.keys(possibleWords).find(key => (possibleWords[key] === `${flippedCardName}`))
+    notFlippedCardI.innerHTML = conformityCard;
 
     card.append(flippedCardTag, notFlippedCardI);
 

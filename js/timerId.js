@@ -1,6 +1,9 @@
+// таймер в режиме проверки знаний
+
 import { timer } from "./script.js";
 
-export let timerId = setInterval(() => {
+export let timerFunction = () => {
+
     let [minutes, seconds] = timer.textContent.split(":").map(Number);
     if (seconds < 59) {
         seconds++;
@@ -10,18 +13,12 @@ export let timerId = setInterval(() => {
     }
 
     timer.textContent = `${format(minutes)}:${format(seconds)}`;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
-}, 1000);
-
-function format(val) {
-    if (val < 10) {
-        return `0${val}`;
+    function format(val) {
+        if (val < 10) {
+            return `0${val}`;
+        }
+        return val;
     }
-    return val;
-}
-
-//обнуление таймера
-export function clearTimer() {
-    clearInterval(timerId);
-    timer.textContent = `00:00`;
 }

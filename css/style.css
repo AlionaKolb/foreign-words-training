@@ -159,7 +159,8 @@ progress {
     background-color: #dadbdc;
 }
 
-.card {
+
+/*.card {
     width: 200px;
     height: 120px;
     padding: 10px;
@@ -171,23 +172,16 @@ progress {
     box-sizing: border-box;
     border: 1px solid #dadbdc;
     cursor: pointer;
-}
+}*/
 
-.card.correct {
+
+/*.card.correct {
     background-color: #98e2e1;
-}
+}*/
 
 .fade-out {
     animation: fadeOut ease 1.5s;
     animation-fill-mode: forwards;
-}
-
-
-/*.card*/
-
-.wrong {
-    background-color: #f3a6be;
-    animation: shake 0.5s;
 }
 
 #exam-cards {
@@ -352,4 +346,13 @@ progress {
 
 .game-card:hover {
     background: #d1d1c0;
+}
+
+.correct {
+    background: #98e2e1 !important;
+}
+
+.wrong {
+    background-color: #f3a6be !important;
+    animation: shake 0.5s;
 }

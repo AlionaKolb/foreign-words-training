@@ -1,3 +1,5 @@
+//Рандом карт в зависимости от сложности уровня
+
 import { possibleWords } from "./getRandomWord.js";
 
 export const shuffle = (array) => {
@@ -13,7 +15,6 @@ export const shuffle = (array) => {
         ];
     }
 
-    return array;
 }
 
 export const createIconsArray = (array) => {
